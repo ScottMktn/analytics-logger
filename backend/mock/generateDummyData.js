@@ -77,7 +77,3 @@ function generateMockData(numEvents = 1000) {
     },
   };
 }
-
-const mockData = generateMockData();
-console.log(JSON.stringify(mockData, null, 2));
-console.log("Mock API Key:", mockData.mockApiKey);

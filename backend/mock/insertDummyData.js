@@ -14,8 +14,6 @@ const mockData = JSON.parse(fs.readFileSync("dummyData.json", "utf8"));
 async function insertData() {
   const { events } = mockData;
 
-  // dummy api key: mock_b2a74d98a1ff6268e01ae447c4064a60
-
   // Insert data in batches
   const batchSize = 100;
   for (let i = 0; i < events.length; i += batchSize) {
