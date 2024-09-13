@@ -2,9 +2,8 @@ const { createClient } = require("@supabase/supabase-js");
 const fs = require("fs");
 
 // Load your Supabase URL and SERVICE ROLE KEY (not the anon key)
-const supabaseUrl = "https://lfldqjgvjvzvdanqwuxw.supabase.co";
-const supabaseServiceRoleKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxmbGRxamd2anZ6dmRhbnF3dXh3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcyNTkwNzA4MCwiZXhwIjoyMDQxNDgzMDgwfQ.QZlaNkNEnYEFrpV7kzkwq8WQTlp1lTz9oXBJ2vfO2bU";
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 // Create Supabase client with service role key
 const supabase = createClient(supabaseUrl, supabaseServiceRoleKey);
